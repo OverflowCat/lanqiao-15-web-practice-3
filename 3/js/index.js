@@ -8,7 +8,11 @@ const spell2 = document.getElementById('spell2'); //咒语 2
 key1Button.addEventListener('click', async () => {
     // 从后台请求钥匙1的咒语部分
     key1Button.disabled = true;
-    let {data} =  await axios.get('/spellone')
+    let {data} =  await axios.get('/spellone', {
+        "headers": {
+            "Authorization": "2b58f9a8-7d73-4a9c-b8a2-9f05d6e8e3c7",
+        }
+    })
     spell1.innerHTML = data;
     tryOpenTreasureBox();
 });
@@ -16,7 +20,11 @@ key1Button.addEventListener('click', async () => {
 key2Button.addEventListener('click', async () => {
     // 从后台请求钥匙2的咒语部分
     key2Button.disabled = true;
-    let {data} =  await axios.get('/spelltwo')
+    let {data} =  await axios.get('/spelltwo',  {
+        "headers": {
+            "Authorization": "2b58f9a8-7d73-4a9c-b8a2-9f05d6e8e3c7",
+        }
+    })
     spell2.innerHTML = data;
     tryOpenTreasureBox();
 });
