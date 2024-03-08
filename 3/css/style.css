@@ -1,0 +1,122 @@
+p{
+         text-align: center;
+         width: 100%;   
+     }
+     #suceess-message{
+       display: none;
+       color: green;
+       font-size: 18px;
+     }
+     body {
+         justify-content: center;
+         min-height: 100vh;
+         background-color: #f0f0f0;
+         font-family: Arial, sans-serif;
+         overflow: hidden;
+     }
+     .key-con{
+         margin-top: 60px;
+     }
+
+     .treasure-container {
+         margin: 100px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .box-container {
+         position: relative;
+     }
+
+     .box {
+         width: 150px;
+         height: 150px;
+         position: relative;
+         transform-style: preserve-3d;
+         transform: rotateX(-90deg) rotateY(0deg);
+         transition: transform 0.5s;
+     }
+
+
+     .box.opened {
+         transform: rotateX(-10deg) rotateY(20deg);
+         transition: transform 1s ease-in-out;
+     }
+
+     .side {
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         background-color: rgba(139, 69, 19, 0.9);
+         border: 2px solid #654321;
+         opacity: 0.9;
+     }
+
+     .front {
+         transform: translateZ(75px);
+     }
+
+     .back {
+         transform: translateZ(-75px) rotateY(180deg);
+     }
+
+     .left {
+         transform: rotateY(-90deg) translateX(-75px);
+         transform-origin: top left;
+     }
+
+     .right {
+         transform: rotateY(90deg) translateX(75px);
+         transform-origin: top right;
+     }
+
+     .top {
+         width: 150px;
+         height: 75px;
+         position: absolute;
+         top: -75px;
+         left: 0;
+         background-color: rgba(139, 69, 19, 0.9);
+         border: 2px solid #654321;
+         opacity: 0.9;
+     }
+
+     .bottom {
+         transform: rotateX(-90deg) translateY(75px);
+         transform-origin: bottom center;
+     }
+
+
+     .keys {
+         display: flex;
+
+     }
+
+     .key-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 0 20px;
+     }
+
+     .key {
+         padding: 8px 15px;
+         background-color: #409eff;
+         border: none;
+         border-radius: 4px;
+         color: #fff;
+         cursor: pointer;
+         transition: background-color 0.3s, transform 0.3s;
+         margin-top: 10px;
+     }
+
+     .key:disabled {
+         background-color: #c0c4cc;
+         cursor: not-allowed;
+     }
+     .key:hover {
+         background-color: #66b1ff;
+         transform: scale(1.05);
+     }
+

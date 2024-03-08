@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./lib/axios.js"></script>
+    <script src="lib/axios-mock-adapter.min.js"></script>
+    <script src="./lib/mock.js"></script>
+    <title>神秘咒语</title>
+</head>
+<body>
+    <p id="suceess-message">获取宝藏成功</p>
+    <div class="treasure-container">
+        <div class="box-container">
+            <div class="box" id="treasureBox">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+                <div class="top"></div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+        <di class="key-con">
+            <p>获取咒语的钥匙</p>
+            <div class="keys">
+
+                <div class="key-container">
+                    <button class="key" id="key1">🔑 钥匙1</button>
+                    <p id="spell1">咒语的一半</p>
+                </div>
+                <div class="key-container">
+                    <button class="key" id="key2">🔑 钥匙2</button>
+                    <p  id="spell2">咒语的另一半</p>
+                </div>
+            </div>
+        </di>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
