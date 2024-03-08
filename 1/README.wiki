@@ -1,0 +1,4 @@
+=== 目标 ===
+
+# 设置 <code>.billboard</code> 元素的圆角为 <code>10px</code>，背景图片为 <code>images</code> 文件夹下的 <code>woodiness.jpg</code>。
+# 设置 <code>.top-sign</code> 元素上面两个角是圆角 <code>15px</code>，下面两个角是直角，元素 X 轴倾斜 -20</code> 度。
