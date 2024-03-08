@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.switch {
+    margin-top: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    border-radius: 17px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.switch-inner {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.switch-on {
+    background-color: #4caf50;
+}
+
+.switch-on .switch-inner {
+    transform: translateX(26px);
+}
+
+.switch-label {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+}

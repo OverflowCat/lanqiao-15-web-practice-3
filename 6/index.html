@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>营业状态切换</title>
+    <script src="./lib/vue.global.js"></script> <!-- 引入Vue.js库 -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- 引入样式表 -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>营业状态切换</h1> <!-- 页面标题 -->
+        </div>
+        <!-- 显示店铺状态 -->
+        <p>当前店铺状况: {{ isWorking ? '营业中' : '已打烊' }}</p>
+        <!-- 根据状态显示相应的图片 -->
+        <img :src="isWorking ? workImage : restImage" alt="Status Image">
+        <!-- 切换店铺状态的开关按钮 -->
+        <div class="switch" @click="toggleWorking" :class="{ 'switch-on': isWorking }">
+            <span class="switch-inner"></span>
+        </div>
+    </div>
+    <script setup>
+        const { ref } = Vue; // 引入Vue中的ref函数
+
+        function useToggle(state) {
+            // TODO:待补充代码
+            let current = ref(state);
+            const setToggle = (e) => {
+                current.value = !current.value;
+            }
+            return [current, setToggle]
+        }
+
+        const app = Vue.createApp({
+            setup() {
+                const [isWorking, toggleWorking] = useToggle(false) // 使用自定义的useToggle函数创建状态和切换函数
+                const workImage = './images/open.jpg' // 营业状态的图片路径
+                const restImage = './images/close.jpg' // 打烊状态的图片路径
+                return {
+                    isWorking,
+                    toggleWorking,
+                    workImage,
+                    restImage
+                }
+            }
+        });
+
+        app.mount('#app'); // 将Vue应用挂载到id为app的元素上
+    </script>
+</body>
+
+</html>
