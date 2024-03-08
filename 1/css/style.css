@@ -1,0 +1,57 @@
+.billboard {
+  position: relative;
+  background-color: #8e6534;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  /* TODO：待补充代码  设置圆角 10px，背景图片为woodiness.jpg  */
+  background-image: url("/images/woodiness.jpg");
+  border-radius: 10px;
+}
+.top-sign {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: #a87f4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  /* TODO：待补充代码   上面两个角是圆角 15px，下面两个角是直角  元素 x 轴倾斜 20度*/
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transform: skew(-20deg);
+}
+
+
+
+
+/* 以下代码不需要修改 */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .billboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: translateY(-200px); 
+  }
+  .support {
+    background-color: #a87f4a;
+    width: 20px;
+    height: 150px;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
