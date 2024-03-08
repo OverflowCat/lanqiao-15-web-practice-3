@@ -1,0 +1,29 @@
+div div {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.3rem;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+[red=""] {
+  background-color: red;
+}
+
+[yellow=""] {
+  background-color: yellow;
+}
+
+[blue=""] {
+  background-color: blue;
+}
+
+/* TODO: 实现原子化 flex */
+[flex^="~"] {
+  display: flex;
+}
+
+[flex$="col"] /* [flex="~ col"] */ {
+  flex-direction: column;
+}
